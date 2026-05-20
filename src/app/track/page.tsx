@@ -135,9 +135,9 @@ export default function OrderTrackerPage() {
             {/* Rider Profile Card */}
             <div className={styles.driverCard}>
               <div className={styles.driverHeader}>
-                <div className={styles.driverAvatar}>RK</div>
+                <div className={styles.driverAvatar}>FW</div>
                 <div className={styles.driverInfo}>
-                  <span className={styles.driverName}>Ramesh Kumar</span>
+                  <span className={styles.driverName}>FabWashing Personnel</span>
                   <span className={styles.driverRole}>💧 EV Logistics Officer</span>
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function OrderTrackerPage() {
               <button
                 className={`btn-outline ${styles.callBtn}`}
                 style={{ width: '100%', justifyContent: 'center' }}
-                onClick={() => alert('Dialing Ramesh Kumar (+91 9845012345)...')}
+                onClick={() => alert('Dialing FabWashing Personnel (08407000048)...')}
               >
                 📞 Contact Rider
               </button>
@@ -173,7 +173,7 @@ export default function OrderTrackerPage() {
               <div
                 className={styles.mapRider}
                 style={{ left: `${progressPercent}%` }}
-                title="Ramesh Kumar (EV)"
+                title="FabWashing Personnel (EV)"
               >
                 🛵
               </div>
@@ -207,9 +207,9 @@ export default function OrderTrackerPage() {
                   }}
                 ></span>
                 {activeStep === 0 && 'Order has been placed. Waiting for rider pickup assignment.'}
-                {activeStep === 1 && 'Ramesh is on his way. Arriving at your doorstep in 12 mins.'}
+                {activeStep === 1 && 'FabWashing Personnel is on the way. Arriving at your doorstep in 12 mins.'}
                 {activeStep > 1 && activeStep < 5 && 'Garments are being processed at Patna hub.'}
-                {activeStep === 5 && 'Ramesh has collected processed clothes. Heading to you.'}
+                {activeStep === 5 && 'FabWashing Personnel has collected processed clothes. Heading to you.'}
                 {activeStep === 6 && 'Clothes successfully delivered. Welcome to FabWashing.'}
               </div>
             </div>
