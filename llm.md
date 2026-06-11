@@ -7,12 +7,16 @@
 
 ---
 
-## 1. Project Profile & Links
+### 1. Project Profile & Links
 *   **Business Name**: FabWashing (Digital laundry & dry cleaning service)
 *   **Locality**: Patna, Bihar, India
 *   **Primary Live URL**: [https://fabwashing.com](https://fabwashing.com)
 *   **GitHub Repository**: [abhishekkumarai/fabwashing](https://github.com/abhishekkumarai/fabwashing) (GitHub username: `abhishekkumarai`)
 *   **Vercel Project Scope**: `3abhishekkumar-3596s-projects/fabwashing` (Vercel account: `3abhishekkumar@gmail.com`)
+*   **Vercel Deployment Region**: **Mumbai, India (`bom1`)** for both Edge Routing and Serverless/API Function Execution.
+    > [!WARNING]
+    > **Do not change the Vercel deployment region.** Keeping the serverless execution and edge routing in Mumbai (`bom1`) is critical to ensure minimum latency for our local Patna, Bihar user base.
+
 
 ---
 
