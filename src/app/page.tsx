@@ -15,6 +15,89 @@ export default function Home() {
   const [pincode, setPincode] = useState('');
   const [checking, setChecking] = useState(false);
   const [checkStatus, setCheckStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
+  const faqItems = [
+    {
+      question: 'What areas in Patna does FabWashing serve?',
+      answer: 'FabWashing currently provides laundry and dry cleaning services to several active pincodes in Patna, Bihar, including Bailey Road, Lohiya Path, Chotti Rukanpura, Saguna More, Kankarbagh, and surrounding areas. You can enter your pincode in our checker above to verify serviceability.'
+    },
+    {
+      question: 'How does the 24-hour pickup and delivery work?',
+      answer: 'Once you schedule a booking on our website, a FabWashing rider will arrive in an electric vehicle (EV) to collect your laundry. We process your garments using eco-friendly detergents at our specialized facility and deliver them back to your doorstep within 24 hours, freshly cleaned, ironed, and neatly folded.'
+    },
+    {
+      question: 'Do you offer express delivery for urgent laundry?',
+      answer: 'Yes! We offer a 4-hour express "Sprint" service at checkout for steam ironing and quick wash services. This is perfect for last-minute business meetings or special occasions.'
+    },
+    {
+      question: 'What makes FabWashing eco-friendly?',
+      answer: 'We care deeply about Patna\'s environment. We use 100% biodegradable detergents, recycle water in our washing machines, deliver using our proprietary EV fleet to reduce carbon emissions, and package all your garments in reusable, zero-plastic packaging.'
+    },
+    {
+      question: 'What are the pricing rates for laundry and dry cleaning?',
+      answer: 'Our rates start at ₹20 per piece for Wash & Fold, ₹25 per piece for Wash & Iron, ₹15 per piece for Steam Ironing, and ₹70 per piece for dry cleaning. You can view the full pricing breakdown on our Services page.'
+    }
+  ];
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LaundryBusiness",
+    "name": "FabWashing",
+    "image": "https://fabwashing.com/logo.png",
+    "@id": "https://fabwashing.com",
+    "url": "https://fabwashing.com",
+    "telephone": "+9108407000048",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bailey Road, near Shyama Apartment, Lohiya Path, Chotti Rukanpura",
+      "addressLocality": "Patna",
+      "addressRegion": "Bihar",
+      "postalCode": "800025",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.6112,
+      "longitude": 85.0874
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/fabwashing"
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
 
   const handlePincodeSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -303,6 +386,49 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 6. FAQ Section (GEO/AEO Optimization) */}
+      <section className={styles.faqSection}>
+        <div className="container">
+          <h2 className={styles.faqTitle}>Frequently Asked Questions</h2>
+          <p className={styles.faqSubtitle}>
+            Got questions about our Patna laundry & dry cleaning service? We have got answers.
+          </p>
+
+          <div className={styles.faqContainer}>
+            {faqItems.map((item, idx) => (
+              <div
+                key={idx}
+                className={`${styles.faqItem} ${openFaqIndex === idx ? styles.faqItemActive : ''}`}
+              >
+                <button
+                  className={styles.faqQuestion}
+                  onClick={() => toggleFaq(idx)}
+                  aria-expanded={openFaqIndex === idx}
+                >
+                  <span>{item.question}</span>
+                  <span className={`${styles.faqIcon} ${openFaqIndex === idx ? styles.faqIconActive : ''}`}>
+                    +
+                  </span>
+                </button>
+                <div className={`${styles.faqAnswer} ${openFaqIndex === idx ? styles.faqAnswerActive : ''}`}>
+                  <p className={styles.faqAnswerText}>{item.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* JSON-LD Schemas for Search & AI Engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </div>
   );
 }
