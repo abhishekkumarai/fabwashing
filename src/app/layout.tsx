@@ -4,6 +4,7 @@ import { CartProvider } from '../context/CartContext';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
           </div>
         </CartProvider>
         <Analytics />
+        <SpeedInsights />
         {gaId && (
           <>
             <Script
@@ -50,4 +52,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

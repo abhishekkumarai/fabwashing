@@ -46,7 +46,7 @@
 ## 4. Key Directory & Code Map
 
 *   `src/app/`: Next.js App Router root.
-    *   `layout.tsx`: Root layout, sets global metadata, embeds Vercel Analytics, loads Google Analytics (GA4) dynamically, and loads the global cart provider.
+    *   `layout.tsx`: Root layout, sets global metadata, embeds Vercel Analytics & Speed Insights, loads Google Analytics (GA4) dynamically, and loads the global cart provider.
     *   `page.tsx`: Home page with pincode checker, AEO/GEO FAQ Accordion UI, and embedded JSON-LD schemas.
     *   `sitemap.ts`: Generates `sitemap.xml`.
     *   `robots.ts`: Generates `robots.txt` (allows LLM search bots like `GPTBot`, `PerplexityBot`, `Google-Extended`, and `ClaudeBot` to crawl pages).
