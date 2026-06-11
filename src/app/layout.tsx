@@ -3,6 +3,8 @@ import './globals.css';
 import { CartProvider } from '../context/CartContext';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import { Analytics } from '@vercel/analytics/react';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'FabWashing - Professional Laundry & Dry Cleaning on Autopilot',
@@ -15,6 +17,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="en">
       <body>
@@ -25,7 +29,25 @@ export default function RootLayout({
             <Footer />
           </div>
         </CartProvider>
+        <Analytics />
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaId}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
 }
+
