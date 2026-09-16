@@ -1,0 +1,35 @@
+# Node / Next.js
+**/node_modules/
+**/.next/
+**/out/
+**/build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Python / Django
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+**/static_collected/
+**/media/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Vercel
+.vercel
+**/.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db

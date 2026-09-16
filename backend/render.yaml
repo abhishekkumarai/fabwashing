@@ -1,0 +1,32 @@
+# Render blueprint for the WashNLaundry LaundryPro backend + managed Postgres.
+# Deploy: in Render, "New +" → "Blueprint" → point at this repo (root dir = backend/),
+# or place this file at the repo root and set rootDir accordingly.
+databases:
+  - name: laundrypro-db
+    databaseName: laundrypro
+    user: laundry
+    plan: free
+
+services:
+  - type: web
+    name: laundrypro-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate && python manage.py seed"
+    startCommand: "gunicorn config.wsgi:application --bind 0.0.0.0:$PORT --workers 3"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: laundrypro-db
+          property: connectionString
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "0"
+      - key: DJANGO_ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: CORS_ALLOWED_ORIGINS
+        # Set this to your Vercel URL after the frontend is deployed, e.g.
+        # https://your-app.vercel.app
+        sync: false

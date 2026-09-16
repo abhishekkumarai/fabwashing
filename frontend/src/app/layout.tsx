@@ -1,0 +1,26 @@
+import type { Metadata } from "next";
+import { Geist } from "next/font/google";
+import "./globals.css";
+import { AppProviders } from "@/lib/app-context";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "WashNLaundry LaundryPro",
+  description: "Multi-branch · Franchise laundry management (clone)",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
+      <body className="min-h-full">
+        <AppProviders>{children}</AppProviders>
+      </body>
+    </html>
+  );
+}
