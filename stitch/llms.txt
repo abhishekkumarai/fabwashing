@@ -75,6 +75,13 @@
 - Raja Bazar & Ashiana Nagar
 - Gola Road
 
+
+## Community Programs & Fast Re-Order
+- **Express QR Re-Order Portal**: https://fabwashing.com/reorder
+  - Fast 1-tap WhatsApp collection scheduling for existing customers across Patna.
+- **Neighbor Referral Program ("Give ₹100, Get ₹100")**: https://fabwashing.com/refer
+  - Apartment residents and flatmates in Patna receive ₹100 off their first doorstep laundry order, and the referrer receives ₹100 credit using referral code `FAB100`.
+
 ## How to Book
 - **Call Helpline**: 084070 00048
 - **WhatsApp Booking**: wa.me/918407000048
