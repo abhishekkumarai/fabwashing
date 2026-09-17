@@ -2,7 +2,8 @@
 """
 Compiles the FabWashing Patna website replacing all artificial / placeholder data 
 with 100% verified, ground-truth business details from Patna, Bihar.
-Ensures no false claims like "24 hours doorstep delivery", and writes to both index.html and fabwashing-nordic-eco.html.
+Includes proper SVG brand icons for Instagram, Facebook, WhatsApp, and Phone.
+Writes to both index.html and fabwashing-nordic-eco.html.
 """
 
 html_content = '''<!DOCTYPE html>
@@ -64,7 +65,9 @@ html_content = '''<!DOCTYPE html>
       </a>
       <!-- Direct Contact Badge -->
       <a href="tel:08407000048" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-[#0D3B36] bg-[#F4F6F4] hover:bg-[#EAEFEA] border border-stone-200 transition-colors">
-        <span class="material-symbols-outlined text-[#059669] text-[18px]">call</span>
+        <svg class="w-4 h-4 text-[#059669]" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+        </svg>
         <span>084070 00048</span>
       </a>
     </div>
@@ -124,13 +127,19 @@ html_content = '''<!DOCTYPE html>
                   </div>
                 </div>
 
-                <!-- Fast WhatsApp & Call Buttons -->
+                <!-- Fast WhatsApp & Call Buttons with Proper Icons -->
                 <div class="pt-2 border-t border-stone-100 flex flex-col sm:flex-row items-center gap-2">
                   <a href="https://wa.me/918407000048?text=Hi%20FabWashing,%20I%20would%20like%20to%20book%20a%20laundry%20pickup%20in%20Patna" target="_blank" rel="noopener noreferrer" class="w-full sm:w-1/2 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#059669] hover:bg-[#047857] text-white text-xs font-bold shadow-sm transition-all">
-                    <span>💬 Book via WhatsApp</span>
+                    <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path fill-rule="evenodd" d="M12.031 2C6.49 2 2 6.49 2 12.031c0 1.807.478 3.518 1.31 5.013L2 22l5.127-1.282c1.442.784 3.093 1.229 4.848 1.229 5.541 0 10.031-4.49 10.031-10.031C22.006 6.49 17.572 2 12.031 2zm0 18.258c-1.579 0-3.072-.424-4.372-1.164l-.314-.18-3.045.762.775-2.969-.197-.333a8.217 8.217 0 01-1.26-4.343c0-4.566 3.714-8.28 8.28-8.28 4.566 0 8.28 3.714 8.28 8.28 0 4.566-3.714 8.28-8.28 8.28zm4.536-6.195c-.248-.124-1.468-.724-1.696-.807-.228-.083-.394-.124-.56.124-.165.248-.642.807-.787.973-.145.165-.29.186-.538.062-.248-.124-1.047-.386-1.995-1.231-.737-.658-1.235-1.47-1.38-1.718-.145-.248-.015-.382.109-.505.112-.111.248-.29.372-.435.124-.145.166-.248.249-.414.083-.165.041-.31-.021-.435-.062-.124-.56-1.347-.766-1.844-.202-.484-.407-.419-.56-.427l-.477-.008c-.165 0-.435.062-.663.31-.228.248-.87 0.85-.87 2.073s.891 2.404 1.015 2.57c.124.165 1.753 2.677 4.247 3.754.593.256 1.056.409 1.417.524.595.189 1.137.162 1.565.099.477-.071 1.468-.6 1.675-1.18.207-.579.207-1.076.145-1.18-.062-.103-.228-.165-.476-.289z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Book via WhatsApp</span>
                   </a>
                   <a href="tel:08407000048" class="w-full sm:w-1/2 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#F4F6F4] hover:bg-[#EAEFEA] text-[#0D3B36] text-xs font-bold border border-stone-200 transition-all">
-                    <span>📞 Call: 084070 00048</span>
+                    <svg class="w-4 h-4 text-[#059669] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+                    </svg>
+                    <span>Call: 084070 00048</span>
                   </a>
                 </div>
               </div>
@@ -597,12 +606,12 @@ html_content = '''<!DOCTYPE html>
     </div>
   </main>
 
-  <!-- FOOTER with Real Contact & Facebook Page Link -->
+  <!-- FOOTER with Real Contact & Social Media Links with Proper Icons -->
   <footer class="w-full bg-[#F4F6F4] border-t border-stone-200 text-stone-600 pt-14 pb-10">
     <div class="max-w-[1200px] mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10">
         
-        <!-- Brand Info -->
+        <!-- Brand Info & Social Badges -->
         <div class="lg:col-span-5 flex flex-col gap-3">
           <div class="flex items-center gap-3">
             <img alt="FabWashing Logo" class="h-8 w-auto object-contain" src="./logo.png"/>
@@ -611,17 +620,42 @@ html_content = '''<!DOCTYPE html>
           <p class="text-xs text-stone-600 pr-4 leading-relaxed">
             Patna's leading technology-driven, sustainable daily laundry &amp; dry cleaning service provider. Delivering hygiene, quality fabric care, and free doorstep pickup across the city.
           </p>
-          <div class="flex items-center gap-2 pt-2">
-            <!-- Real Facebook Page Link -->
-            <a href="https://www.facebook.com/FABWashing" target="_blank" rel="noopener noreferrer" aria-label="FabWashing Facebook Page" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 shadow-sm flex items-center gap-1.5 text-xs text-stone-700 hover:bg-[#0D3B36] hover:text-white hover:border-[#0D3B36] transition-all font-semibold">
-              <span class="material-symbols-outlined text-[16px]">public</span>
-              <span>Facebook: FAB Washing</span>
+
+          <!-- Social Media & Contact Quick Links with Proper Icons -->
+          <div class="flex flex-wrap items-center gap-2 pt-2">
+            
+            <!-- Instagram Link with Proper Icon -->
+            <a href="https://www.instagram.com/fabwashing/" target="_blank" rel="noopener noreferrer" aria-label="FabWashing Instagram" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 shadow-sm flex items-center gap-2 text-xs text-stone-700 hover:bg-gradient-to-r hover:from-pink-500 hover:to-amber-500 hover:text-white hover:border-transparent transition-all font-semibold group">
+              <svg class="w-4 h-4 text-pink-600 group-hover:text-white transition-colors shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Instagram</span>
             </a>
-            <!-- Direct Call Link -->
-            <a href="tel:08407000048" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 shadow-sm flex items-center gap-1.5 text-xs text-[#059669] hover:bg-[#059669] hover:text-white transition-all font-semibold">
-              <span class="material-symbols-outlined text-[16px]">call</span>
+
+            <!-- Facebook Link with Proper Icon -->
+            <a href="https://www.facebook.com/FABWashing" target="_blank" rel="noopener noreferrer" aria-label="FabWashing Facebook Page" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 shadow-sm flex items-center gap-2 text-xs text-stone-700 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all font-semibold group">
+              <svg class="w-4 h-4 text-[#1877F2] group-hover:text-white transition-colors shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+
+            <!-- WhatsApp Link with Proper Icon -->
+            <a href="https://wa.me/918407000048?text=Hi%20FabWashing,%20I%20would%20like%20to%20book%20a%20laundry%20pickup%20in%20Patna" target="_blank" rel="noopener noreferrer" aria-label="FabWashing WhatsApp" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 shadow-sm flex items-center gap-2 text-xs text-stone-700 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all font-semibold group">
+              <svg class="w-4 h-4 text-[#25D366] group-hover:text-white transition-colors shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.031 2C6.49 2 2 6.49 2 12.031c0 1.807.478 3.518 1.31 5.013L2 22l5.127-1.282c1.442.784 3.093 1.229 4.848 1.229 5.541 0 10.031-4.49 10.031-10.031C22.006 6.49 17.572 2 12.031 2zm0 18.258c-1.579 0-3.072-.424-4.372-1.164l-.314-.18-3.045.762.775-2.969-.197-.333a8.217 8.217 0 01-1.26-4.343c0-4.566 3.714-8.28 8.28-8.28 4.566 0 8.28 3.714 8.28 8.28 0 4.566-3.714 8.28-8.28 8.28zm4.536-6.195c-.248-.124-1.468-.724-1.696-.807-.228-.083-.394-.124-.56.124-.165.248-.642.807-.787.973-.145.165-.29.186-.538.062-.248-.124-1.047-.386-1.995-1.231-.737-.658-1.235-1.47-1.38-1.718-.145-.248-.015-.382.109-.505.112-.111.248-.29.372-.435.124-.145.166-.248.249-.414.083-.165.041-.31-.021-.435-.062-.124-.56-1.347-.766-1.844-.202-.484-.407-.419-.56-.427l-.477-.008c-.165 0-.435.062-.663.31-.228.248-.87 0.85-.87 2.073s.891 2.404 1.015 2.57c.124.165 1.753 2.677 4.247 3.754.593.256 1.056.409 1.417.524.595.189 1.137.162 1.565.099.477-.071 1.468-.6 1.675-1.18.207-.579.207-1.076.145-1.18-.062-.103-.228-.165-.476-.289z" clip-rule="evenodd"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+
+            <!-- Direct Call Link with Proper Icon -->
+            <a href="tel:08407000048" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 shadow-sm flex items-center gap-2 text-xs text-[#0D3B36] hover:bg-[#0D3B36] hover:text-white transition-all font-semibold group">
+              <svg class="w-4 h-4 text-[#059669] group-hover:text-white transition-colors shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+              </svg>
               <span>084070 00048</span>
             </a>
+
           </div>
         </div>
 
@@ -638,25 +672,48 @@ html_content = '''<!DOCTYPE html>
           </ul>
         </div>
 
-        <!-- Direct Contact Details -->
+        <!-- Direct Contact Details with Proper Brand Icons -->
         <div class="lg:col-span-4 flex flex-col gap-3">
           <div class="text-xs text-[#0D3B36] uppercase tracking-wider font-bold mb-1">Registered Address &amp; Contact</div>
-          <div class="flex items-start gap-2 text-xs text-stone-600">
+          
+          <div class="flex items-start gap-2.5 text-xs text-stone-600">
             <span class="material-symbols-outlined text-[18px] text-[#059669] shrink-0 mt-0.5">location_on</span>
             <span>Bailey Road, near Shyama Apartment, Lohiya Path, Chotti Rukanpura, Patna, Bihar 800025</span>
           </div>
-          <div class="flex items-center gap-2 text-xs text-stone-600">
-            <span class="material-symbols-outlined text-[18px] text-[#059669] shrink-0">call</span>
+
+          <div class="flex items-center gap-2.5 text-xs text-stone-600">
+            <svg class="w-4 h-4 text-[#059669] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+            </svg>
             <a href="tel:08407000048" class="hover:text-[#0D3B36] font-semibold transition-colors">084070 00048</a>
           </div>
-          <div class="flex items-center gap-2 text-xs text-stone-600">
-            <span class="material-symbols-outlined text-[18px] text-[#059669] shrink-0">chat</span>
+
+          <div class="flex items-center gap-2.5 text-xs text-stone-600">
+            <svg class="w-4 h-4 text-[#25D366] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M12.031 2C6.49 2 2 6.49 2 12.031c0 1.807.478 3.518 1.31 5.013L2 22l5.127-1.282c1.442.784 3.093 1.229 4.848 1.229 5.541 0 10.031-4.49 10.031-10.031C22.006 6.49 17.572 2 12.031 2zm0 18.258c-1.579 0-3.072-.424-4.372-1.164l-.314-.18-3.045.762.775-2.969-.197-.333a8.217 8.217 0 01-1.26-4.343c0-4.566 3.714-8.28 8.28-8.28 4.566 0 8.28 3.714 8.28 8.28 0 4.566-3.714 8.28-8.28 8.28zm4.536-6.195c-.248-.124-1.468-.724-1.696-.807-.228-.083-.394-.124-.56.124-.165.248-.642.807-.787.973-.145.165-.29.186-.538.062-.248-.124-1.047-.386-1.995-1.231-.737-.658-1.235-1.47-1.38-1.718-.145-.248-.015-.382.109-.505.112-.111.248-.29.372-.435.124-.145.166-.248.249-.414.083-.165.041-.31-.021-.435-.062-.124-.56-1.347-.766-1.844-.202-.484-.407-.419-.56-.427l-.477-.008c-.165 0-.435.062-.663.31-.228.248-.87 0.85-.87 2.073s.891 2.404 1.015 2.57c.124.165 1.753 2.677 4.247 3.754.593.256 1.056.409 1.417.524.595.189 1.137.162 1.565.099.477-.071 1.468-.6 1.675-1.18.207-.579.207-1.076.145-1.18-.062-.103-.228-.165-.476-.289z" clip-rule="evenodd"/>
+            </svg>
             <a href="https://wa.me/918407000048" target="_blank" rel="noopener noreferrer" class="hover:text-[#059669] font-semibold transition-colors">WhatsApp: 084070 00048</a>
           </div>
-          <div class="flex items-center gap-2 text-xs text-stone-600">
+
+          <div class="flex items-center gap-2.5 text-xs text-stone-600">
+            <svg class="w-4 h-4 text-pink-600 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
+            </svg>
+            <a href="https://www.instagram.com/fabwashing/" target="_blank" rel="noopener noreferrer" class="hover:text-pink-600 font-semibold transition-colors">Instagram: @fabwashing</a>
+          </div>
+
+          <div class="flex items-center gap-2.5 text-xs text-stone-600">
+            <svg class="w-4 h-4 text-[#1877F2] shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/>
+            </svg>
+            <a href="https://www.facebook.com/FABWashing" target="_blank" rel="noopener noreferrer" class="hover:text-[#1877F2] font-semibold transition-colors">Facebook: FAB Washing</a>
+          </div>
+
+          <div class="flex items-center gap-2.5 text-xs text-stone-600">
             <span class="material-symbols-outlined text-[18px] text-[#059669] shrink-0">mail</span>
             <a href="mailto:support@fabwashing.com" class="hover:text-[#0D3B36] transition-colors">support@fabwashing.com</a>
           </div>
+
         </div>
 
       </div>
@@ -682,4 +739,4 @@ for fpath in files:
     with open(fpath, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
-print("Webpage saved to both index.html and fabwashing-nordic-eco.html successfully!")
+print("Webpage saved with Instagram and brand SVG icons to both index.html and fabwashing-nordic-eco.html successfully!")
