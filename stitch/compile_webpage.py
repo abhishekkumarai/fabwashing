@@ -23,11 +23,27 @@ html_content = '''<!DOCTYPE html>
   <meta name="author" content="FabWashing Patna"/>
   <meta name="publisher" content="FabWashing"/>
 
-  <!-- Local & Geographic SEO Meta Tags -->
+  <!-- Local & Geographic SEO Meta Tags (Patna Ground Truth) -->
   <meta name="geo.region" content="IN-BR"/>
   <meta name="geo.placename" content="Patna, Bihar, India"/>
   <meta name="geo.position" content="25.6121;85.0827"/>
   <meta name="ICBM" content="25.6121, 85.0827"/>
+
+  <!-- Generative Engine Optimization (GEO) & AI Discovery Meta Tags -->
+  <meta name="ai:purpose" content="Laundry, Dry Cleaning, and Steam Ironing service in Patna, Bihar with free scheduled doorstep pickup and delivery."/>
+  <meta name="ai:service-area" content="Patna, Bailey Road, Boring Road, Patliputra, Saguna More, Danapur, Dhanaut, Anisabad, Kankarbagh, Khagaul, Raja Bazar"/>
+  <meta name="ai:contact" content="+918407000048, support@fabwashing.com"/>
+  <meta name="citation_title" content="FabWashing Patna - Professional Laundry &amp; Dry Cleaning Service"/>
+  <meta name="citation_author" content="FabWashing"/>
+  <meta name="citation_publisher" content="FabWashing"/>
+  <meta name="DC.title" content="FabWashing Patna | Best Laundry, Steam Ironing &amp; Dry Cleaning Services"/>
+  <meta name="DC.creator" content="FabWashing"/>
+  <meta name="DC.subject" content="Laundry, Dry Cleaning, Steam Ironing, Doorstep Laundry Patna, FabWashing"/>
+  <meta name="DC.description" content="Patna's top-rated laundry, steam ironing &amp; dry cleaning service with free doorstep pickup &amp; delivery. Separate hygienic wash &amp; expert fabric care. Call 084070 00048."/>
+  <meta name="DC.publisher" content="FabWashing"/>
+  <meta name="DC.coverage" content="Patna, Bihar, India"/>
+  <meta name="DC.language" content="en"/>
+  <link rel="alternate" type="text/markdown" href="https://fabwashing.com/llms.txt" title="LLM Context"/>
 
   <!-- Open Graph / Facebook / WhatsApp Meta Tags -->
   <meta property="og:type" content="business.business"/>
@@ -68,7 +84,7 @@ html_content = '''<!DOCTYPE html>
   <link rel="icon" href="./favicon.ico"/>
   <link rel="apple-touch-icon" href="./favicon.png"/>
 
-  <!-- Comprehensive SEO Schema Script (JSON-LD) -->
+  <!-- Comprehensive SEO & GEO Schema Script (JSON-LD) -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -93,6 +109,17 @@ html_content = '''<!DOCTYPE html>
       },
       "image": "https://fabwashing.com/brand-logo.png",
       "description": "Patna's leading technology-driven, sustainable daily laundry & dry cleaning service provider. Delivering separate hygienic wash cycles, quality fabric care, and free doorstep pickup and delivery across Patna.",
+      "disambiguatingDescription": "FabWashing is a technology-driven professional laundry and dry cleaning enterprise operating 4 physical branches in Patna, Bihar offering separate batch washing and free scheduled doorstep pickup.",
+      "knowsAbout": [
+        "Laundry Services",
+        "Dry Cleaning",
+        "High-Pressure Steam Pressing",
+        "Wedding Attire Dry Cleaning",
+        "Mink Blanket & Quilt Washing",
+        "Separate Machine Hygienic Washing",
+        "Doorstep Laundry Pickup and Delivery"
+      ],
+      "keywords": "laundry service in patna, dry cleaning patna, steam ironing patna, wash and fold patna, doorstep laundry service patna",
       "telephone": "+918407000048",
       "email": "support@fabwashing.com",
       "priceRange": "₹₹",
