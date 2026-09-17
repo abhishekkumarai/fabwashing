@@ -1,6 +1,12 @@
 {
   "framework": null,
   "cleanUrls": true,
+  "crons": [
+    {
+      "path": "/api/cron/seo-refresh",
+      "schedule": "0 2 * * *"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*\\.(?:png|jpg|jpeg|ico|svg|webp|avif))",
