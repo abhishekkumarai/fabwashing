@@ -28,6 +28,17 @@
    - Address: R K Puram, Khagaul Road, near Gajanan Sweets, Saguna More, Patna.
    - Primary Serving Areas: Saguna More, Danapur Station, Khagaul Road.
 
+
+## Dedicated Patna Neighborhood Landing Pages & Delivery Hubs
+- **Bailey Road / Rukanpura Hub**: https://fabwashing.com/patna/bailey-road
+  - Primary coverage: Bailey Road, Chotti Rukanpura, Jagdeo Path, Sheikhpura, Raja Bazar, Ashiana Nagar.
+- **Saguna More & Danapur Hub**: https://fabwashing.com/patna/saguna-more
+  - Primary coverage: Saguna More, Danapur Station, Khagaul Road, RK Puram, Rupaspur.
+- **Boring Road & Patliputra Hub**: https://fabwashing.com/patna/boring-road
+  - Primary coverage: Boring Road, Boring Canal Road, Patliputra Colony, Sri Krishna Puri, Anandpuri.
+- **Kankarbagh & Rajendra Nagar Hub**: https://fabwashing.com/patna/kankarbagh
+  - Primary coverage: Kankarbagh Colony, PC Colony, Rajendra Nagar, Hanuman Nagar, Kanti Factory Road.
+
 ## Services Offered
 1. **Wash & Fold**:
    - Everyday apparel, casual shirts, t-shirts, jeans, and daily wear.
