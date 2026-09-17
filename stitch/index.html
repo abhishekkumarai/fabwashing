@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="./favicon.png"/>
+  <link rel="icon" href="./favicon.ico"/>
   <style>
     @layer base {
       html, body { margin: 0; padding: 0; }
@@ -51,9 +53,12 @@
   <!-- HEADER (Depth button as requested, no right-hand menu) -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-stone-200/60 shadow-[0_1px_10px_rgba(0,0,0,0.02)]">
     <div class="max-w-[1200px] mx-auto px-6 flex items-center justify-between h-20">
-      <a href="/" class="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/60 backdrop-blur-md border border-stone-200/90 shadow-[0_4px_16px_rgba(13,59,54,0.07),0_1px_3px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,0.95)] hover:bg-white/85 hover:border-emerald-800/20 hover:shadow-[0_8px_24px_rgba(13,59,54,0.12),0_2px_6px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,1)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group">
-        <img alt="FabWashing Logo" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="./logo.png"/>
-        <span class="text-xl text-[#0D3B36] font-extrabold tracking-tight">Fab<span class="text-[#059669]">Washing</span></span>
+      <a href="/" class="inline-flex items-center gap-3.5 px-4 py-2 rounded-2xl bg-white/70 backdrop-blur-md border border-stone-200/90 shadow-[0_4px_16px_rgba(13,59,54,0.07),0_1px_3px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,0.95)] hover:bg-white/90 hover:border-emerald-800/20 hover:shadow-[0_8px_24px_rgba(13,59,54,0.12),0_2px_6px_rgba(0,0,0,0.04),inset_0_1px_1px_rgba(255,255,255,1)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group">
+        <img alt="FabWashing Logo" class="h-11 w-11 rounded-full object-contain transition-transform duration-300 group-hover:scale-105 shadow-sm border border-stone-100" src="./logo.png"/>
+        <div class="flex flex-col text-left leading-none">
+          <span class="text-lg sm:text-xl text-[#0D3B36] font-extrabold tracking-tight">Fab<span class="text-[#059669]">Washing</span></span>
+          <span class="text-[10px] text-stone-500 font-semibold tracking-wider uppercase mt-1">A New Level of Laundry</span>
+        </div>
       </a>
       <!-- Direct Contact Badge -->
       <a href="tel:08407000048" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-[#0D3B36] bg-[#F4F6F4] hover:bg-[#EAEFEA] border border-stone-200 transition-colors">
@@ -605,9 +610,12 @@
         
         <!-- Brand Info & Social Badges -->
         <div class="lg:col-span-5 flex flex-col gap-3">
-          <div class="flex items-center gap-3">
-            <img alt="FabWashing Logo" class="h-8 w-auto object-contain" src="./logo.png"/>
-            <span class="text-xl text-[#0D3B36] font-bold tracking-tight">Fab<span class="text-[#059669]">Washing</span></span>
+          <div class="flex items-center gap-3.5">
+            <img alt="FabWashing Logo" class="h-12 w-12 rounded-full object-contain shadow-sm border border-stone-100" src="./logo.png"/>
+            <div class="flex flex-col leading-none">
+              <span class="text-xl text-[#0D3B36] font-bold tracking-tight">Fab<span class="text-[#059669]">Washing</span></span>
+              <span class="text-[11px] text-[#059669] font-semibold tracking-wide mt-1">A New Level of Laundry</span>
+            </div>
           </div>
           <p class="text-xs text-stone-600 pr-4 leading-relaxed">
             Patna's leading technology-driven, sustainable daily laundry &amp; dry cleaning service provider. Delivering hygiene, quality fabric care, and free doorstep pickup across the city.
